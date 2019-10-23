@@ -2,7 +2,7 @@
  
 #ifndef USE_DATA_FROM_DISK
 
-#include <avr/pgmspace.h>
+#include <pgmspace.h>
 #include <SPI.h>
 #include <SD.h>
 
