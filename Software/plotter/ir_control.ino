@@ -1,7 +1,11 @@
+#include "MachineDefs.h"
+
+#if defined(ARDUINO_ARCH_ESP32)
 #include <IRrecv.h>
 #include <IRremoteESP8266.h>
-#include "MachineDefs.h"
- 
+#elif
+#include <IRremote.h>
+#endif
 IRrecv irrecv(RECV_PIN);
 decode_results results;  
 
