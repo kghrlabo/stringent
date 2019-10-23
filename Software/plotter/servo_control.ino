@@ -1,7 +1,10 @@
 #include "MachineDefs.h"
 
-#include "MachineDefs.h"
+#if defined(ARDUINO_ARCH_ESP32)
+#include <ESP32Servo.h>  
+#elif
 #include <Servo.h>  
+#endif
 Servo myservo;
 
 //disable to preserve space
