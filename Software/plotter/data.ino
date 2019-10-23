@@ -2,7 +2,11 @@
  
 #ifndef USE_DATA_FROM_DISK
 
+#if defined(ARDUINO_ARCH_ESP32)
 #include <pgmspace.h>
+#elif
+#include <avr/pgmspace.h>
+#endif
 #include <SPI.h>
 #include <SD.h>
 
