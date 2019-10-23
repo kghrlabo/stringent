@@ -1,4 +1,5 @@
-#include <IRremote.h>
+#include <IRrecv.h>
+#include <IRremoteESP8266.h>
 #include "MachineDefs.h"
  
 IRrecv irrecv(RECV_PIN);
@@ -147,7 +148,7 @@ void readIR()
     else {
        makePenNoise(1);
     }
-    SER_PRINTLN2(results.value, HEX);      
+    //SER_PRINTLN2(results.value, HEX);      
     
     irrecv.resume(); // Receive the next value
   }  
