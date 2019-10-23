@@ -115,10 +115,10 @@ void step(long nextLeftSteps, long nextRightSteps, boolean forceStop)
         numSteps = max(abs(leftSteps), abs(rightSteps));     
         if(accStop && currentSpeed >= (numSteps*D_SPEED + MIN_SPEED)) {    
           //start breaking
-          currentSpeed = max(currentSpeed-(currentSpeed/numSteps), MIN_SPEED);
+          currentSpeed = max((float)(currentSpeed-(currentSpeed/numSteps)), (float)MIN_SPEED);
         }      
         else {
-          currentSpeed = min(currentSpeed+D_SPEED, MAX_SPEED);
+          currentSpeed = min((float)(currentSpeed+D_SPEED), (float)MAX_SPEED);
         }  
         
         delayMicroseconds(1.0 / currentSpeed); 
